@@ -1,0 +1,215 @@
+/* google fonts  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* common styles or utilities */
+body{
+    background-color: #F3F1FF;
+    font-family: 'Poppins', sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: white;
+    width: 870px;
+    padding: 30px;
+    margin-top: 21px;
+    border-radius: 5px;
+
+}
+hr{
+    /* margin-top: 29px; */
+    border: 1px solid #D1D1D1;
+}
+
+        /* ---------------------
+           top-players-style 
+       ----------------------*/
+.section-title{
+    color:#562EFF;
+    font-size: 24px;
+    margin-left: 30px;
+    margin-top: 3px;
+}
+
+.top-players{
+  margin-bottom: 30px;
+}
+.players{ 
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap: 30px;
+    margin-left: 30px;
+    /* margin-bottom: 30px; */
+}
+.player{
+    
+    display: flex;
+    align-items: center;
+    
+}
+
+.player img{
+    height: 56px;
+    width: 56px;
+}
+.player-name{
+    margin-left: 16px;
+    font-size: 18px;
+}
+/*------------------------
+        top-blogs
+ ------------------ */
+ .top-blogs .section-title{
+    margin-top: 30px;
+ }
+ .blogs{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     grid-row-gap: 25px;
+     margin-top: 0px
+ }
+ .blog{
+     display: flex;
+     margin-left: 30px;
+ }
+
+ .blog .thumbnail img{
+   width: 177px;
+   height: 117px;
+   margin-top: 20px;
+ }
+ .blog-info{
+     margin-left: 16px;
+ }
+ .blog-title{
+     font-size: 20px;
+     margin-top: 20px;
+ }
+ .blog-author {
+    color: #9F9F9F;
+    font-size: 16px;
+ }
+ .blog-author a{
+    color: #562EFF;
+    font-size: 16px;
+    text-decoration: none;
+ }
+      /* ---------------
+            courses style 
+      -----------------*/
+      .course{
+          margin-left: 30px;
+          width: 253px;
+          height: 320px;
+          box-shadow:5px 5px 40px whitesmoke;
+         
+          display: grid;
+          align-items: center;
+          grid-template-columns: repeat(3, 1fr);
+          grid-column-gap: 60px;
+      }
+      .course .course-banner img{
+          
+        width: 224px;
+        height: 104px;
+      }
+    
+    .course-title{
+       
+    }  
+    .fa-star{
+        font-size: 12px;
+    }
+    .fa-star.filled{
+        color:  #FFC014;
+        
+    }
+    .fa-star.empty , .rate{
+        color: #AEAEAE;
+        
+    }
+    .course-info{
+      display: flex;
+       justify-content:space-between;
+       align-items: center;
+    }
+   
+    .time{
+        background: #FFE4E8;
+        color: #ED6B4F;
+      
+       margin-left: 15px;
+       border-radius: 15px ;
+       font-size: 16px;
+    }
+
+
+    /* -------------------
+            Media Quaries
+    -------------------------  */
+
+       /* for mobile devices [0px to 688px] */
+       @media only  screen and (max-width: 688px)
+        {
+            .container{
+                width: 100%;
+               height: 100%;
+                
+            }
+            .section-title{
+                text-align: center;
+                color: green;
+            }
+           .players,.blogs, .course{
+               /* background-color: tomato; */
+               grid-template-columns: repeat(1, 1fr);             
+           }
+           .player,.blog{
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+           }
+           .course{
+               margin: auto;
+               
+
+           }
+           .course-banner{
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               margin-bottom: 40px;
+           }   
+           .course-height{
+            height: 1000px;
+           }
+           
+       }
+       /* for ipad devices 689 to 991px */
+       @media only screen and (min-width: 688px) and (max-width:991px)
+        {
+            .container{
+                width: 100%;
+            }
+           .players,.course{
+              /* background-color: tomato; */
+              grid-template-columns: repeat(2, 1fr);
+              
+           }
+           .course{
+            /* margin: auto; */
+        }
+           .course-height{
+            height: 1000px;
+           }
+           .course-banner:nth-child(3){
+               margin-top: 60px;
+           }
+       }
+
+    
